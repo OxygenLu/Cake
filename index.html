@@ -115,8 +115,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            /* 替换了一张更具空气感、更像云朵的甜点背景图 */
-            background: linear-gradient(rgba(93, 78, 68, 0.3), rgba(93, 78, 68, 0.3)), url('https://images.unsplash.com/photo-1601409870003-7459c343e639?q=80&w=1920&auto=format&fit=crop');
+            /* ---【修改点1：背景图改为本地路径】--- */
+            background: linear-gradient(rgba(93, 78, 68, 0.3), rgba(93, 78, 68, 0.3)), url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -129,7 +129,6 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        /* 让主标题的一部分使用花体强调 */
         .hero-title-accent {
             font-family: var(--cursive-font);
             color: var(--primary-color);
@@ -174,7 +173,7 @@
 
         .about-img img {
             width: 100%;
-            border-radius: 30px; /* 更大的圆角 */
+            border-radius: 30px;
             box-shadow: var(--shadow);
         }
 
@@ -185,7 +184,6 @@
             text-align: center;
         }
         
-        /* 用花体英文做副标题装饰 */
         .section-subtitle-deco {
             display: block;
             text-align: center;
@@ -215,9 +213,9 @@
 
         .product-card {
             background: var(--bg-color);
-            border-radius: 30px; /* 卡片更圆润 */
+            border-radius: 30px;
             overflow: hidden;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 更有弹性的动画 */
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(244, 185, 66, 0.1);
         }
 
@@ -239,7 +237,7 @@
         }
 
         .product-card:hover .product-img img {
-            transform: scale(1.1) rotate(2deg); /* 微妙的旋转增加趣味 */
+            transform: scale(1.1) rotate(2deg);
         }
 
         .product-info {
@@ -255,7 +253,7 @@
 
         .price {
             color: var(--accent-color);
-            font-family: var(--cursive-font); /* 价格使用花体 */
+            font-family: var(--cursive-font);
             font-size: 1.8rem;
             font-weight: bold;
             display: block;
@@ -264,7 +262,7 @@
 
         .btn-buy {
             padding: 12px 35px;
-            background: var(--primary-color); /* 默认改为实心色 */
+            background: var(--primary-color);
             color: var(--white);
             border-radius: 30px;
             font-weight: bold;
@@ -304,7 +302,7 @@
 
         /* --- 页脚 --- */
         footer {
-            background-color: #3E322B; /* 更深一点的巧克力色 */
+            background-color: #3E322B;
             color: rgba(255,255,255,0.8);
             padding: 80px 10% 30px;
         }
@@ -377,7 +375,7 @@
 
     <section id="about" class="section about">
         <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1619149640638-6715de03314d?q=80&w=1000&auto=format&fit=crop" alt="烘焙原料">
+            <img src="images/封面.png" alt="甄选手工半熟芝士">
         </div>
         <div class="about-text">
             <span class="section-subtitle-deco">Our Philosophy</span>
@@ -405,7 +403,7 @@
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1596459165661-20707ee7053f?q=80&w=800&auto=format&fit=crop" alt="原味半熟芝士">
+                    <img src="images/原味半熟芝士.png" alt="原味半熟芝士">
                 </div>
                 <div class="product-info">
                     <h3>经典原味・云朵芝士</h3>
@@ -417,7 +415,7 @@
 
             <div class="product-card">
                 <div class="product-img">
-                     <img src="https://images.unsplash.com/photo-1579306194655-7a07233fb51a?q=80&w=800&auto=format&fit=crop" alt="抹茶半熟芝士">
+                     <img src="images/抹茶半熟芝士.png" alt="抹茶半熟芝士">
                 </div>
                 <div class="product-info">
                     <h3>五十铃・抹茶芝士</h3>
@@ -429,7 +427,7 @@
 
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="巧克力半熟芝士">
+                    <img src="images/巧克力半熟芝士.png" alt="巧克力半熟芝士">
                 </div>
                 <div class="product-info">
                     <h3>法芙娜・黑巧芝士</h3>
