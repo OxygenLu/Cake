@@ -6,7 +6,7 @@
     <title>云朵半熟芝士 | Cloud Hanjuku Cheese</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -17,14 +17,14 @@
             --accent-color: #D97D30; /* 烤痕色 */
             --bg-color: #FFFDF7; /* 更暖一点的奶油白背景 */
             --text-color: #5D4E44; /* 更柔和的深棕色 */
-            --light-text: #9C8E85;
+            --light-text: #8C7E72;
             --white: #FFFFFF;
-            --shadow: 0 15px 35px rgba(244, 185, 66, 0.2); /* 更柔和暖色阴影 */
+            --shadow: 0 15px 35px rgba(244, 185, 66, 0.15); 
 
             /* 字体定义 */
             --body-font: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            --title-font: 'Noto Serif SC', 'STSong', serif; /* 中文标题用优雅宋体 */
-            --cursive-font: 'Dancing Script', cursive; /* 英文装饰用花体 */
+            --title-font: 'Noto Serif SC', 'STSong', serif; 
+            --cursive-font: 'Dancing Script', cursive; 
         }
 
         * {
@@ -36,7 +36,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.7;
+            line-height: 1.8; /* 增加行高，适合阅读更多文字 */
             font-family: var(--body-font);
             overflow-x: hidden;
         }
@@ -46,7 +46,6 @@
             font-weight: bold;
         }
 
-        /* 特殊花体类 */
         .cursive-accent {
             font-family: var(--cursive-font);
             font-weight: 700;
@@ -64,7 +63,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 253, 247, 0.9);
+            background: rgba(255, 253, 247, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(244, 185, 66, 0.1);
@@ -115,8 +114,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            /* ---【修改点1：背景图改为本地路径】--- */
-            background: linear-gradient(rgba(93, 78, 68, 0.3), rgba(93, 78, 68, 0.3)), url('images/hero-bg.jpg');
+            /* 保持您的路径不变 */
+            background: linear-gradient(rgba(93, 78, 68, 0.35), rgba(93, 78, 68, 0.35)), url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -126,31 +125,37 @@
         .hero-content h1 {
             font-size: 4.5rem;
             margin-bottom: 20px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
 
         .hero-title-accent {
             font-family: var(--cursive-font);
             color: var(--primary-color);
-            padding-right: 10px;
+            padding-right: 15px;
+            display: block;
+            font-size: 5rem;
+            margin-bottom: 10px;
         }
 
         .hero-content p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 40px;
             font-family: var(--title-font);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-weight: 300;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         .btn-main {
-            padding: 18px 45px;
+            padding: 18px 50px;
             background-color: var(--white);
             color: var(--accent-color);
             font-size: 1.2rem;
             border-radius: 50px;
             font-weight: bold;
             display: inline-block;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
         .btn-main:hover {
@@ -166,37 +171,52 @@
 
         .about {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: 1fr 1.2fr; /* 文字区域稍微宽一点 */
+            gap: 70px;
+            align-items: start; /* 顶部对齐 */
+        }
+
+        .about-img {
+            position: relative;
         }
 
         .about-img img {
             width: 100%;
             border-radius: 30px;
             box-shadow: var(--shadow);
+            position: sticky; /* 简单的粘性定位效果 */
+            top: 100px;
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--accent-color);
-            margin-bottom: 25px;
-            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
         }
         
         .section-subtitle-deco {
             display: block;
-            text-align: center;
             font-family: var(--cursive-font);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .about-text p {
             margin-bottom: 25px;
-            color: var(--light-text);
-            font-size: 1.15rem;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            text-align: justify; /* 两端对齐，看起来更像文章 */
+        }
+
+        .highlight-box {
+            background: #FFF;
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 5px solid var(--primary-color);
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
         }
 
         /* --- 产品展示 --- */
@@ -206,26 +226,28 @@
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 50px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            margin-top: 70px;
         }
 
         .product-card {
             background: var(--bg-color);
-            border-radius: 30px;
+            border-radius: 25px;
             overflow: hidden;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(244, 185, 66, 0.1);
+            border: 1px solid rgba(244, 185, 66, 0.15);
+            display: flex;
+            flex-direction: column; /* 让内容垂直排列，底部按钮对齐 */
         }
 
         .product-card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-10px);
             box-shadow: var(--shadow);
         }
 
         .product-img {
-            height: 280px;
+            height: 260px;
             overflow: hidden;
         }
 
@@ -233,45 +255,99 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.5s;
+            transition: 0.6s;
         }
 
         .product-card:hover .product-img img {
-            transform: scale(1.1) rotate(2deg);
+            transform: scale(1.1);
         }
 
         .product-info {
-            padding: 35px;
+            padding: 35px 30px;
             text-align: center;
+            flex-grow: 1; /* 撑开中间内容 */
+            display: flex;
+            flex-direction: column;
         }
 
         .product-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .flavor-desc {
+            font-size: 0.95rem;
+            color: var(--light-text);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: left; /* 左对齐描述 */
+            border-bottom: 1px dashed #DDD;
+            padding-bottom: 15px;
+        }
+
+        /* 口味标签 */
+        .taste-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
             color: var(--accent-color);
+        }
+
+        .price-area {
+            margin-top: auto; /* 自动推到底部 */
         }
 
         .price {
             color: var(--accent-color);
             font-family: var(--cursive-font);
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .btn-buy {
-            padding: 12px 35px;
+            padding: 12px 40px;
             background: var(--primary-color);
             color: var(--white);
             border-radius: 30px;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(244, 185, 66, 0.2);
+            display: inline-block;
+            transition: 0.3s;
         }
 
         .btn-buy:hover {
             background: var(--accent-color);
-            transform: translateY(-2px);
+        }
+
+        /* --- 赏味指南 (新增板块) --- */
+        .tasting-guide {
+            text-align: center;
+            background-color: var(--bg-color);
+            padding-bottom: 50px;
+        }
+        
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .guide-card {
+            background: #FFF;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .guide-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
         /* --- 卖点特性 --- */
@@ -279,25 +355,22 @@
             display: flex;
             justify-content: space-around;
             text-align: center;
-            background-color: var(--bg-color);
-            padding-top: 60px;
-            padding-bottom: 60px;
-            border-top: 1px dashed rgba(217, 125, 48, 0.2);
-            border-bottom: 1px dashed rgba(217, 125, 48, 0.2);
+            background-color: #FFF;
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
 
         .feature-item i {
-            font-size: 3rem;
-            background: -webkit-linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            color: var(--accent-color);
             margin-bottom: 20px;
         }
 
-        .feature-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--accent-color);
+        .feature-item p {
+             max-width: 250px;
+             margin: 0 auto;
+             font-size: 0.9rem;
+             color: #888;
         }
 
         /* --- 页脚 --- */
@@ -322,11 +395,10 @@
 
         .footer-col ul li {
             margin-bottom: 15px;
-            transition: 0.3s;
         }
-        .footer-col ul li:hover {
+        .footer-col ul li a:hover {
             color: var(--primary-color);
-            transform: translateX(5px);
+            padding-left: 5px;
         }
 
         .copyright {
@@ -340,13 +412,14 @@
         /* --- 移动端适配 --- */
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 3rem; }
-            .hero-title-accent { display: block; font-size: 4rem; }
-            .about { grid-template-columns: 1fr; text-align: center; }
-            .section-title { font-size: 2.5rem; }
+            .hero-title-accent { font-size: 4rem; }
+            .about { grid-template-columns: 1fr; gap: 40px; }
+            .about-img img { position: static; } /* 移动端取消粘性定位 */
+            .guide-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column; gap: 40px; }
             header { padding: 15px 20px; }
             nav ul { display: none; }
-            .features { flex-direction: column; gap: 40px; }
+            .features { flex-direction: column; gap: 50px; }
         }
     </style>
 </head>
@@ -367,9 +440,9 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1><span class="hero-title-accent">Cloud Soft</span><br>轻盈如云，入口即化</h1>
-            <p>双重水浴烘焙，重新定义半熟芝士的空气感</p>
-            <a href="#products" class="btn-main">探索甜蜜 / Explore</a>
+            <h1><span class="hero-title-accent">The Texture of Clouds</span>轻盈如云，一抿即化</h1>
+            <p>不仅仅是芝士蛋糕，更是 0.1 秒就在舌尖融化的温柔奇迹。</p>
+            <a href="#products" class="btn-main">探索风味 / Discover</a>
         </div>
     </section>
 
@@ -379,26 +452,35 @@
         </div>
         <div class="about-text">
             <span class="section-subtitle-deco">Our Philosophy</span>
-            <h2 class="section-title">半熟的哲学</h2>
-            <p>我们相信，最好的味道介于"生"与"熟"的微妙边界。Cloud Cheese 采用北海道直送鲜奶与 Kiri 奶油奶酪，在严格控制的低温下进行慢烤水浴。</p>
-            <p>表层是诱人的金黄色泽，内部则保留了如云朵般湿润、绵密的半熟流心口感。每一口，都是对味蕾的极致宠溺。</p>
-            <div style="margin-top: 40px; display: flex; gap: 30px; justify-content: flex-start;">
-                <div style="text-align: center;">
-                    <h3 class="cursive-accent" style="color:var(--primary-color); font-size: 2.5rem;">100%</h3>
-                    <span style="font-family: var(--title-font);">纯天然制</span>
-                </div>
-                <div style="text-align: center;">
-                    <h3 class="cursive-accent" style="color:var(--primary-color); font-size: 2.5rem;">0℃</h3>
-                    <span style="font-family: var(--title-font);">鲜冷配送</span>
+            <h2 class="section-title">半熟的哲学：<br>介于生与熟的完美平衡</h2>
+            
+            <p>故事始于北海道的一个雪天。我们发现，芝士在完全烤熟之前，会经过一个极短的“半熟状态”——那是风味最浓郁、口感却如舒芙蕾般轻盈的时刻。</p>
+            
+            <p>为了留住这转瞬即逝的美味，Cloud Cheese 独创了<b>“双重水浴慢烤法”</b>。我们使用法国 Kiri 奶油芝士与北海道直送鲜奶，严格控制烤箱湿度，让蛋糕体在低温蒸汽中慢慢熟成。</p>
+            
+            <p>表层通过高温瞬间上色，形成诱人的金黄薄皮；内部则保留了如同云朵般湿润、绵密的流心口感。没有重芝士的甜腻，只有清爽的奶香在口中层层递进。</p>
+
+            <div class="highlight-box">
+                <div style="display: flex; gap: 30px; justify-content: space-around;">
+                    <div style="text-align: center;">
+                        <h3 class="cursive-accent" style="color:var(--primary-color); font-size: 2.2rem;">Kiri</h3>
+                        <span style="font-family: var(--title-font); font-size: 0.9rem;">法国进口芝士</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <h3 class="cursive-accent" style="color:var(--primary-color); font-size: 2.2rem;">150°C</h3>
+                        <span style="font-family: var(--title-font); font-size: 0.9rem;">恒温水浴烘焙</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="products" class="section products">
-        <span class="section-subtitle-deco">Seasonal Specials</span>
-        <h2 class="section-title">当季限定系列</h2>
-        <p style="color: var(--light-text); text-align: center; font-family: var(--title-font);">严选全球顶级食材，每日匠心手作</p>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <span class="section-subtitle-deco">Signature Flavors</span>
+            <h2 class="section-title">当季风味名录</h2>
+            <p style="color: var(--light-text); font-family: var(--title-font);">严选全球顶级食材，每一枚都承载着我们对味道的极致追求。</p>
+        </div>
 
         <div class="product-grid">
             <div class="product-card">
@@ -407,9 +489,17 @@
                 </div>
                 <div class="product-info">
                     <h3>经典原味・云朵芝士</h3>
-                    <p style="font-size: 0.9rem; color: #999; margin-bottom: 15px;">浓郁奶香 / 空气口感 / 5枚入</p>
-                    <span class="price">¥ 38.00</span>
-                    <a href="#" class="btn-buy">加入购物车</a>
+                    <div class="taste-tags">
+                        <span><i class="fas fa-seedling"></i> 浓郁奶香</span>
+                        <span><i class="fas fa-cloud"></i> 空气口感</span>
+                    </div>
+                    <p class="flavor-desc">
+                        融合了法国 Kiri 芝士的微咸与北海道牛乳的醇厚。入口前调是烘烤的焦香，中调爆发浓郁奶味，余韵则是清爽不腻的酸奶风味。经典的纯粹，最能体现“半熟”的魅力。
+                    </p>
+                    <div class="price-area">
+                        <span class="price">¥ 38.00 <span style="font-size: 1rem; font-weight: normal; color: #999;">/ 5枚入</span></span>
+                        <a href="#" class="btn-buy">加入购物车</a>
+                    </div>
                 </div>
             </div>
 
@@ -419,9 +509,17 @@
                 </div>
                 <div class="product-info">
                     <h3>五十铃・抹茶芝士</h3>
-                    <p style="font-size: 0.9rem; color: #999; margin-bottom: 15px;">宇治一番茶 / 清新回甘 / 5枚入</p>
-                    <span class="price">¥ 42.00</span>
-                    <a href="#" class="btn-buy">加入购物车</a>
+                    <div class="taste-tags">
+                        <span><i class="fas fa-leaf"></i> 宇治抹茶</span>
+                        <span><i class="fas fa-spa"></i> 微苦回甘</span>
+                    </div>
+                    <p class="flavor-desc">
+                        奢侈使用京都宇治百年老店的“五十铃”抹茶粉。高雅的茶香完美中和了芝士的甜腻。入口微苦，随后回甘迅速占据口腔，仿佛在品尝这一整片深邃的绿色森林。
+                    </p>
+                    <div class="price-area">
+                        <span class="price">¥ 42.00 <span style="font-size: 1rem; font-weight: normal; color: #999;">/ 5枚入</span></span>
+                        <a href="#" class="btn-buy">加入购物车</a>
+                    </div>
                 </div>
             </div>
 
@@ -431,29 +529,61 @@
                 </div>
                 <div class="product-info">
                     <h3>法芙娜・黑巧芝士</h3>
-                    <p style="font-size: 0.9rem; color: #999; margin-bottom: 15px;">70%黑巧流心 / 榛子脆底 / 5枚入</p>
-                    <span class="price">¥ 45.00</span>
-                    <a href="#" class="btn-buy">加入购物车</a>
+                    <div class="taste-tags">
+                        <span><i class="fas fa-cookie"></i> 70%黑巧</span>
+                        <span><i class="fas fa-star"></i> 榛子脆底</span>
+                    </div>
+                    <p class="flavor-desc">
+                        选用顶级法芙娜 70% 黑巧克力，深邃的可可香气与芝士交融，带来如生巧般丝滑的质地。底部特别铺垫了慢火烘焙的榛子碎，酥脆与绵密在口中交织，演奏出多重口感的华丽乐章。
+                    </p>
+                    <div class="price-area">
+                        <span class="price">¥ 45.00 <span style="font-size: 1rem; font-weight: normal; color: #999;">/ 5枚入</span></span>
+                        <a href="#" class="btn-buy">加入购物车</a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tasting-guide">
+        <span class="section-subtitle-deco">How to Enjoy</span>
+        <h2 class="section-title" style="font-size: 2rem;">一份甜点，三种灵魂</h2>
+        <p>半熟芝士的奇妙之处，在于温度带来的魔法。</p>
+        
+        <div class="guide-grid">
+            <div class="guide-card">
+                <i class="fas fa-snowflake" style="font-size: 2rem; color: #A4D7E8; margin-bottom: 15px;"></i>
+                <h4>冷冻食 | Frozen</h4>
+                <p style="font-size: 0.9rem; color: #666;">像冰淇淋一样的口感。取出后静置3分钟，享受冰凉扎实的芝士在舌尖慢慢融化的过程。</p>
+            </div>
+            <div class="guide-card">
+                <i class="fas fa-temperature-low" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                <h4>冷藏食 | Chilled</h4>
+                <p style="font-size: 0.9rem; color: #666;">最经典的推荐吃法。0-4℃ 能够最大程度保留半熟流心的湿润感，绵软细腻，入口即化。</p>
+            </div>
+            <div class="guide-card">
+                <i class="fas fa-fire" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+                <h4>微波食 | Warmed</h4>
+                <p style="font-size: 0.9rem; color: #666;">微波炉加热 10 秒钟。蛋糕体会像刚出炉的舒芙蕾一样蓬松抖动，芝士香气瞬间爆发。</p>
             </div>
         </div>
     </section>
 
     <section class="section features">
         <div class="feature-item">
-            <i class="fas fa-cheese"></i>
-            <h4>甄选奶源</h4>
-            <p class="cursive-accent" style="font-size: 1.1rem; color: var(--light-text);">France & Hokkaido</p>
+            <i class="fas fa-plane"></i>
+            <h4>全球甄选原料</h4>
+            <p>法国奶油芝士 / 北海道牛乳 / 宇治抹茶</p>
         </div>
         <div class="feature-item">
-            <i class="fas fa-snowflake"></i>
-            <h4>锁鲜工艺</h4>
-            <p class="cursive-accent" style="font-size: 1.1rem; color: var(--light-text);">Keep it Fresh</p>
+            <i class="fas fa-stopwatch"></i>
+            <h4>48小时慢工</h4>
+            <p>从打发到熟成，为了口感我们不惜时间</p>
         </div>
         <div class="feature-item">
-            <i class="fas fa-heart"></i>
-            <h4>手工限量</h4>
-            <p class="cursive-accent" style="font-size: 1.1rem; color: var(--light-text);">Handmade with Love</p>
+            <i class="fas fa-box-open"></i>
+            <h4>顺丰冷链直达</h4>
+            <p>全程低温保鲜，只为送达那一刻的完美</p>
         </div>
     </section>
 
@@ -461,16 +591,18 @@
         <div class="footer-content">
             <div class="footer-col">
                 <div class="logo" style="color: #fff; margin-bottom: 25px; font-size: 2.5rem;">Cloud Cheese.</div>
-                <p style="color: rgba(255,255,255,0.6); max-width: 300px;">
-                    我们只做一件事：<br>探索芝士最温柔的形态。
+                <p style="color: rgba(255,255,255,0.6); max-width: 300px; line-height: 1.6;">
+                    致力于探索芝士的无限可能。<br>
+                    愿这份来自云端的甜蜜，<br>
+                    治愈你生活中的每一个瞬间。
                 </p>
             </div>
             <div class="footer-col">
                 <h4>探索 / Explore</h4>
                 <ul>
-                    <li><a href="#about">品牌故事 Our Story</a></li>
-                    <li><a href="#products">甜点名录 Menu</a></li>
-                    <li><a href="#">会员权益 VIP</a></li>
+                    <li><a href="#about">品牌起源 Story</a></li>
+                    <li><a href="#products">风味名录 Menu</a></li>
+                    <li><a href="#">赏味指南 Guide</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -493,7 +625,7 @@
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
                 header.style.background = 'rgba(255, 253, 247, 0.98)';
-                header.style.padding = '10px 50px'; // 滚动时稍微变窄一点
+                header.style.padding = '10px 50px'; 
             } else {
                 header.style.background = 'rgba(255, 253, 247, 0.9)';
                 header.style.padding = '15px 50px';
